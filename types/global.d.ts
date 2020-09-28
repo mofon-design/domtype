@@ -4,7 +4,7 @@ type Booleanish = 'true' | 'false' | boolean;
  * Global attributes are attributes common to all HTML elements;
  * they can be used on all elements, though they may have no effect on some elements.
  */
-export interface GlobalHTMLAttributes {
+export interface HTMLGlobalAttributes {
   // Living Standard Attributes
   /**
    * Provides a hint for generating a keyboard shortcut for the current element.
