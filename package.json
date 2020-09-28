@@ -1,0 +1,34 @@
+{
+  "name": "@mofon-design/domtype",
+  "version": "0.1.0",
+  "description": "Strict TypeScript types for DOM based on MDN data",
+  "main": "",
+  "types": "index.d.ts",
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "ts-node scripts/verifyCommit.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "chalk": "^3.0.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^2.1.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.0",
+    "yorkie": "^2.0.0"
+  },
+  "repository": "https://github.com/mofon-design/domtype",
+  "license": "MIT",
+  "files": [
+    "index.d.ts"
+  ],
+  "keywords": [
+    "dom",
+    "html",
+    "svg",
+    "typescript",
+    "typings",
+    "types",
+    "definitions"
+  ]
+}
