@@ -42,6 +42,7 @@ export interface AnchorHTMLAttributes extends HTMLGlobalAttributes {
   referrerPolicy?: ReferrerPolicy;
   /**
    * The relationship of the linked URL as space-separated link types.
+   *
    * @see HTMLLinkTypes
    */
   rel?: string;
@@ -69,3 +70,44 @@ export interface AddressHTMLAttributes extends HTMLGlobalAttributes {}
 
 /** @deprecated */
 export interface AppletHTMLAttributes extends HTMLGlobalAttributes {}
+
+export interface AreaHTMLAttributes extends AnchorHTMLAttributes {
+  /**
+   * A text string alternative to display on browsers that do not display images.
+   * The text should be phrased so that it presents the user with the same kind of choice as the image would offer when displayed without the alternative text.
+   * This attribute is required only if the `href` attribute is used.
+   */
+  alt?: string;
+  /**
+   * The `coords` attribute details the coordinates of the `shape` attribute in size, shape, and placement of an `<area>`.
+   * - `rect`: the value is `x1,y1,x2,y2`.
+   *   Value specifies the coordinates of the top-left and bottom-right corner of the rectangle.
+   * - `circle`: the value is `x,y,radius`.
+   *   Value specifies the coordinates of the circle center and the radius.
+   * - `poly`: the value is `x1,y1,x2,y2,..,xn,yn`.
+   *   Value specifies the coordinates of the edges of the polygon.
+   *   If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon.
+   * - `default`: defines the entire region.
+   */
+  coords?: string;
+  /**
+   * Define a names for the clickable area so that it can be scripted by older browsers.
+   *
+   * @deprecated
+   */
+  name?: string;
+  /**
+   * Indicates that no hyperlink exists for the associated area.
+   *
+   * @deprecated Since HTML5, omitting the href attribute is sufficient.
+   */
+  nohref?: boolean;
+  /**
+   * The shape of the associated hot spot.
+   */
+  shape?: 'circle' | 'default' | 'poly' | 'rect';
+  /**
+   * @deprecated No effect. Browsers ignore it.
+   */
+  type?: string;
+}
