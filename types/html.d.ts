@@ -42,6 +42,7 @@ export interface AnchorHTMLAttributes extends HTMLGlobalAttributes {
   referrerPolicy?: ReferrerPolicy;
   /**
    * The relationship of the linked URL as space-separated link types.
+   * @see HTMLLinkTypes
    */
   rel?: string;
   /**
@@ -58,3 +59,13 @@ export interface AnchorHTMLAttributes extends HTMLGlobalAttributes {
    */
   type?: string;
 }
+
+export interface AbbreviationHTMLAttributes extends HTMLGlobalAttributes {}
+
+/** @deprecated */
+export interface AcronymHTMLAttributes extends HTMLGlobalAttributes {}
+
+export interface AddressHTMLAttributes extends HTMLGlobalAttributes {}
+
+/** @deprecated */
+export interface AppletHTMLAttributes extends HTMLGlobalAttributes {}
