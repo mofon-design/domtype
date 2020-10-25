@@ -172,3 +172,24 @@ export interface HTMLLinkTypes {
    */
   up: HTMLAnchorElement | HTMLAreaElement | HTMLLinkElement;
 }
+
+/**
+ * An empty element is an element from HTML, SVG, or MathML that cannot have any child nodes (i.e., nested elements or text nodes).
+ * In HTML, using a closing tag on an empty element is usually invalid. For example, `<input type="text"></input>` is invalid HTML.
+ */
+export type HTMLEmptyElementTagName =
+  | 'area'
+  | 'base'
+  | 'br'
+  | 'col'
+  | 'embed'
+  | 'hr'
+  | 'img'
+  | 'input'
+  | 'keygen'
+  | 'link'
+  | 'meta'
+  | 'param'
+  | 'source'
+  | 'track'
+  | 'wbr';
